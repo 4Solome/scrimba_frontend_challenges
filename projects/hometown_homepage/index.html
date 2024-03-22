@@ -24,6 +24,20 @@
       padding: 20px;
     }
 
+
+    .card {
+      background-color: navy;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .sub-card {
+      background-color: grey;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
     .column {
       flex: 1;
       margin: 0 20px;
@@ -49,26 +63,61 @@
       align-items: center;
       background-color: blue; /* Blue background color */
       padding: 20px; /* Adding padding */
-    }
-
-    .dashboard img {
-      width: 50%;
-      height: auto;
+      width: 300px; /* Set the width */
+      height: 200px; /* Set the height */
+      box-shadow: 0px 8px 0px black; /* Thick black shadow without blur */
+      border-radius: 20px; /* Adjust the value as needed for circular edges */
     }
 
     .dashboard-text {
-      width: 50%;
+      width: 70%; /* Adjusted width for text container */
       text-align: left;
       padding: 20px;
+    }
+
+    .dashboard-image {
+      width: 30%; /* Adjusted width of the image container */
+      padding: 20px;
+      border-radius: 10%; /* Make the image container circular */
+      overflow: hidden; /* Hide overflow content */
+    }
+
+    .dashboard-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10%; /* Make the image circular */
+    }
+
+    /* Italics for the specified text */
+    .dashboard-text p {
+      font-style: italic;
     }
   </style>
 </head>
 <body>
   <!-- FIRST ROW -->
-  <div class="row" style="background: url('images/torshov.jpg') no-repeat center center; background-size: cover;">
-    <h1>Visit Torshov</h1>
-    <h2>Enjoy culture and sports in this vibrant district close to the center of Oslo.</h2>
-  </div>
+    <!-- FIRST ROW -->
+    <!-- FIRST ROW - Visit Torshov -->
+    <div
+      class="row"
+      style="
+        background: url('images/torshov.jpg') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div class="card">
+        <h1>Visit Torshov</h1>
+      </div>
+      <br />
+      <br>
+      <!-- FIRST ROW - Enjoy culture and sports -->
+      <div class="sub-card">
+        <h2>
+          Enjoy culture and sports in this vibrant district close to the center
+          of Oslo.
+        </h2>
+      </div>
+    </div>
 
   <!-- SECOND ROW -->
   <div class="row">
@@ -95,13 +144,14 @@
   <!-- THIRD ROW -->
   <div class="row">
     <div class="dashboard" style="background-color: blue;">
+      <div class="dashboard-image">
+        <img src="images/per.jpg" alt="Your Image">
+      </div>
       <div class="dashboard-text">
         <h3>Your guide</h3>
         <p>"I have lived at Torshov for over 30 years, so I can show you all of its best parts and hidden secrets."</p>
         <h4>Per Harald Borgen</h4>
-        
       </div>
-      
     </div>
   </div>
 </body>
