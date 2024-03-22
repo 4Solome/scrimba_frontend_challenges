@@ -1,36 +1,108 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- HERO SECTION -->
-    <div>
-      <h1>Visit Torshov</h1>
-      <h2>
-        Enjoy culture and sports in this vibrant district close to the center of
-        Oslo.
-      </h2>
-    </div>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px; /* Adjust height as needed */
+      text-align: center;
+    }
 
-    <!-- ACTIVITIES SECTION -->
-    <div>
-      <h3>Top three activities to do at Torshov</h3>
-      <img src="images/park.jpg" />
-      <img src="images/theatre.jpg" />
-      <img src="images/sports.jpg" />
-    </div>
+    .row:nth-child(odd) {
+      background: url('background.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 20px;
+    }
 
-    <!-- GUIDE SECTION -->
-    <div>
-      <h3>Your guide</h3>
-      <p>
-        "I have lived at Torshov for over 30 years, so I can show you all of its
-        best parts and hidden secrets."
-      </p>
-      <h4>Per Harald Borgen</h4>
-      <img src="images/per.jpg" />
+    .row:nth-child(even) {
+      background-color: #add8e6; /* White-blue color */
+      color: black; /* Change text color to black for better visibility */
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: blue; /* Blue background color */
+      padding: 20px; /* Adding padding */
+    }
+
+    .dashboard img {
+      width: 50%;
+      height: auto;
+    }
+
+    .dashboard-text {
+      width: 50%;
+      text-align: left;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- FIRST ROW -->
+  <div class="row" style="background: url('images/torshov.jpg') no-repeat center center; background-size: cover;">
+    <h1>Visit Torshov</h1>
+    <h2>Enjoy culture and sports in this vibrant district close to the center of Oslo.</h2>
+  </div>
+
+  <!-- SECOND ROW -->
+  <div class="row">
+    <div class="column">
+      <div class="circle">
+        <img src="images/park.jpg" alt="Park">
+      </div>
+      <p>Park</p>
     </div>
-  </body>
+    <div class="column">
+      <div class="circle">
+        <img src="images/theatre.jpg" alt="Theatre">
+      </div>
+      <p>Theatre</p>
+    </div>
+    <div class="column">
+      <div class="circle">
+        <img src="images/sports.jpg" alt="Sports">
+      </div>
+      <p>Sports</p>
+    </div>
+  </div>
+
+  <!-- THIRD ROW -->
+  <div class="row">
+    <div class="dashboard" style="background-color: blue;">
+      <div class="dashboard-text">
+        <h3>Your guide</h3>
+        <p>"I have lived at Torshov for over 30 years, so I can show you all of its best parts and hidden secrets."</p>
+        <h4>Per Harald Borgen</h4>
+        
+      </div>
+      
+    </div>
+  </div>
+</body>
 </html>
